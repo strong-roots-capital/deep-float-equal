@@ -4,7 +4,7 @@
  */
 
 import zip from '@strong-roots-capital/zip'
-const floatEqual = require('almost-equal')
+import almostEqual from 'almost-equal'
 
 
 /**
@@ -24,8 +24,8 @@ export default function deepFloatEqual(a: ReadonlyArray<number>, b: ReadonlyArra
     }
 
     const zipped = zip(a, b)
-    for (const pair of zipped) {
-        if (!floatEqual(...pair, floatEqual.FLT_EPSILON, floatEqual.FLT_EPSILON))
+    for (const [x, y] of zipped) {
+        if (!almostEqual(x, y, almostEqual.FLT_EPSILON, almostEqual.FLT_EPSILON))
             return false
     }
 
