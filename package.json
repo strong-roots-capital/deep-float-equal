@@ -44,7 +44,10 @@
     "url": "https://github.com/strong-roots-capital/deep-float-equal/issues"
   },
   "homepage": "https://github.com/strong-roots-capital/deep-float-equal",
-  "dependencies": {},
+  "dependencies": {
+    "@strong-roots-capital/zip": "^1.0.0",
+    "almost-equal": "^1.1.0"
+  },
   "devDependencies": {
     "@types/node": "^10.14.4",
     "@typescript-eslint/eslint-plugin": "^1.7.0",

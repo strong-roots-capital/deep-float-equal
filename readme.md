@@ -12,13 +12,14 @@ npm install @strong-roots-capital/deep-float-equal
 
 ```typescript
 import deepFloatEqual from '@strong-roots-capital/deep-float-equal'
-// TODO: describe usage
+
+let firstArray = [0.1 + 0.2]
+let secondArray = [0.3]
+console.log(deepFloatEqual(firstArray, secondArray))
+//=>true
 ```
 
 ## Related
 
-TODO
-
-## Acknowledgments
-
-TODO
+- [almost-equal](https://github.com/scijs/almost-equal)
+- [zip](https://github.com/strong-roots-capital/zip)
