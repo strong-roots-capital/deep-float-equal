@@ -58,7 +58,7 @@ Related
 
 ▸ **deepFloatEqual**(a: *`ReadonlyArray`<`number`>*, b: *`ReadonlyArray`<`number`>*, epsilon?: *`number`*): `boolean`
 
-*Defined in [deep-float-equal.ts:21](https://github.com/strong-roots-capital/deep-float-equal/blob/da91eb8/src/deep-float-equal.ts#L21)*
+*Defined in [deep-float-equal.ts:20](https://github.com/strong-roots-capital/deep-float-equal/blob/7788e65/src/deep-float-equal.ts#L20)*
 
 Check two objects for float-equality
 
