@@ -23,6 +23,19 @@ console.log(deepFloatEqual(firstArray, secondArray))
 //=>true
 ```
 
+Optionally change the allowed epsilon tolerance
+
+```typescript
+import deepFloatEqual, { FLT_EPSILON } from '@strong-roots-capital/deep-float-equal'
+
+let firstArray = [0.1 + 0.2]
+let secondArray = [0.3]
+console.log(deepFloatEqual(firstArray, secondArray, FLT_EPSILON / 1e10))
+//=>false
+```
+
+`FLT_EPSILON` and `DBL_EPSILON` are re-exported from [almost-equal](https://github.com/scijs/almost-equal).
+
 Related
 -------
 
@@ -43,9 +56,9 @@ Related
 
 ###  deepFloatEqual
 
-▸ **deepFloatEqual**(a: *`ReadonlyArray`<`number`>*, b: *`ReadonlyArray`<`number`>*): `boolean`
+▸ **deepFloatEqual**(a: *`ReadonlyArray`<`number`>*, b: *`ReadonlyArray`<`number`>*, epsilon?: *`number`*): `boolean`
 
-*Defined in [deep-float-equal.ts:20](https://github.com/strong-roots-capital/deep-float-equal/blob/fa85eac/src/deep-float-equal.ts#L20)*
+*Defined in [deep-float-equal.ts:21](https://github.com/strong-roots-capital/deep-float-equal/blob/da91eb8/src/deep-float-equal.ts#L21)*
 
 Check two objects for float-equality
 
@@ -53,10 +66,11 @@ Check two objects for float-equality
 
 **Parameters:**
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| a | `ReadonlyArray`<`number`> |  First object to be compared \`b\` |
-| b | `ReadonlyArray`<`number`> |  Second object to be compared to \`a\` |
+| Name | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| a | `ReadonlyArray`<`number`> | - |  First object to be compared \`b\` |
+| b | `ReadonlyArray`<`number`> | - |  Second object to be compared to \`a\` |
+| `Default value` epsilon | `number` |  almostEqual.FLT_EPSILON |
 
 **Returns:** `boolean`
 True if all floats in the objects are equivalent
