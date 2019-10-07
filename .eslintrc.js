@@ -30,6 +30,7 @@ module.exports = {
         '@typescript-eslint/prefer-string-starts-ends-with': 'warn',
         '@typescript-eslint/promise-function-async': ['error'],
         '@typescript-eslint/require-array-sort-compare': 'error',
+        '@typescript-eslint/array-type': 'warn',
         '@typescript-eslint/restrict-plus-operands': 'warn',
         '@typescript-eslint/unbound-method': ['warn', {ignoreStatic: true}],
         '@typescript-eslint/unified-signatures': 'warn',
