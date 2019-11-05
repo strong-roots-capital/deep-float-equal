@@ -34,6 +34,7 @@ test(shouldBeEqual, true, [1, 2], [1, 2])
 test(shouldBeEqual, true, [1.3456789, 100], [1.345679, 100 + 1e-5], FLT_EPSILON, FLT_EPSILON)
 test(shouldBeEqual, false, [1.3456789, 25.2334], [1.345679, 25.2343])
 test(shouldBeEqual, true, [0.1 + 0.2], [0.3])
+test(shouldBeEqual, false, [0.1 + 0.2], [0.3], FLT_EPSILON / 1e10, FLT_EPSILON / 1e10)
 test(shouldBeEqual, false, [0.1, 0.5], [0.1])
 test(shouldBeEqual, false, [0.1], [0.1, 0.6])
 
