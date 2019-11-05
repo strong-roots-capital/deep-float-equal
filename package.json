@@ -1,6 +1,6 @@
 {
   "name": "@strong-roots-capital/deep-float-equal",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Check two objects for float-equality",
   "main": "dist/src/deep-float-equal.js",
   "types": "dist/src/deep-float-equal.d.ts",
