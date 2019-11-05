@@ -77,7 +77,7 @@ Acknowledgments
 
 ▸ **deepFloatEqual**<`A`,`B`>(a: *`A`*, b: *`B`*, absoluteTolerance?: *`number`*, relativeTolerance?: *`number`*): `boolean`
 
-*Defined in [deep-float-equal.ts:23](https://github.com/strong-roots-capital/deep-float-equal/blob/5e7155f/src/deep-float-equal.ts#L23)*
+*Defined in [deep-float-equal.ts:23](https://github.com/strong-roots-capital/deep-float-equal/blob/52d8065/src/deep-float-equal.ts#L23)*
 
 Check two objects for float-equality
 
