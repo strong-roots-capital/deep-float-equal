@@ -11,7 +11,7 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': ['warn', {allowExpressions: true}],
         '@typescript-eslint/interface-name-prefix': ['warn', 'never'],
         'no-extra-parens': 'off',
-        '@typescript-eslint/no-extra-parens': ['error'],
+        '@typescript-eslint/no-extra-parens': ['warn'],
         '@typescript-eslint/no-this-alias': [
             'error',
             {
@@ -34,7 +34,7 @@ module.exports = {
         '@typescript-eslint/restrict-plus-operands': 'warn',
         '@typescript-eslint/unbound-method': ['warn', {ignoreStatic: true}],
         '@typescript-eslint/unified-signatures': 'warn',
-        '@typescript-eslint/no-explicit-any': 'error',
+        '@typescript-eslint/no-explicit-any': 'warn',
         // @typescript-eslint/func-call-spacing rule not found?
         // 'func-call-spacing': 'off',
         // '@typescript-eslint/func-call-spacing': ['error'],

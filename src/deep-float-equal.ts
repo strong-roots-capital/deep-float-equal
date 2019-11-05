@@ -32,7 +32,7 @@ export default function deepFloatEqual<A, B>(
     if (a && b && typeof a == 'object' && typeof b == 'object') {
         if ((a as unknown as object).constructor !== (b as unknown as object).constructor) return false;
 
-        var length, i, keys;
+        let length, i;
         if (Array.isArray(a)) {
             if (!Array.isArray(b)) return false;
             length = a.length;
@@ -109,7 +109,7 @@ export default function deepFloatEqual<A, B>(
         if ((a as unknown as object).valueOf !== Object.prototype.valueOf) return (a as unknown as object).valueOf() === (b as unknown as object).valueOf();
         if ((a as unknown as object).toString !== Object.prototype.toString) return (a as unknown as object).toString() === (b as unknown as object).toString();
 
-        keys = Object.keys(a);
+        const keys = Object.keys(a);
         length = keys.length;
         if (length !== Object.keys(b).length) return false;
 
@@ -117,7 +117,7 @@ export default function deepFloatEqual<A, B>(
             if (!Object.prototype.hasOwnProperty.call(b, keys[i])) return false;
 
         for (i = length; i-- !== 0;) {
-            var key = keys[i];
+            const key = keys[i];
             if (!deepFloatEqual((a as any)[key], (b as any)[key], absoluteTolerance, relativeTolerance)) return false;
         }
 
