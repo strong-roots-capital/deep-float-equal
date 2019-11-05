@@ -16,9 +16,9 @@ npm install @strong-roots-capital/deep-float-equal
 Use
 ---
 
-#### `deepFloatEqual<A, B>(a: A, b: B, absoluteTolerance = DBL_EPSILON, relativeTolerance = DBL_EPSILON`
+#### `deepFloatEqual<A, B>(a: A, b: B, absoluteTolerance = DBL_EPSILON, relativeTolerance = DBL_EPSILON`)
 
-Checks if corresponding floats inside a pair of arbitrary data-structures are within the given tolerances of one another using the formula:
+Checks for normal deep-equality between objects a and b with the exception that floats are allowed to vary within the given tolerances of one another using the formula:
 
 \|x - y\| < max(absoluteTolerance, min(\|x\|, \|y\|) \* relativeTolerance)
 
@@ -26,7 +26,7 @@ Checks if corresponding floats inside a pair of arbitrary data-structures are wi
 *   absoluteTolerance is x fixed minimal tolerance (set to 0 to ignore)
 *   relativeTolerance is x tolerance that scales with x/y (set to 0 to ignore)
 
-Returns true if x and y are approximately equal.
+Returns true if a, b are deep-equal, with all corresponding floats being approximately equal.
 
 If tolerance argument is omitted, almostEqual.DBL\_EPSILON value is used by default.
 
@@ -49,7 +49,7 @@ import deepFloatEqual, { FLT_EPSILON } from '@strong-roots-capital/deep-float-eq
 
 let firstArray = [0.1 + 0.2]
 let secondArray = [0.3]
-console.log(deepFloatEqual(firstArray, secondArray, FLT_EPSILON / 1e10))
+console.log(deepFloatEqual(firstArray, secondArray, FLT_EPSILON / 1e10, FLT_EPSILON / 1e10))
 //=>false
 ```
 
@@ -77,7 +77,7 @@ Acknowledgments
 
 ▸ **deepFloatEqual**<`A`,`B`>(a: *`A`*, b: *`B`*, absoluteTolerance?: *`number`*, relativeTolerance?: *`number`*): `boolean`
 
-*Defined in [deep-float-equal.ts:23](https://github.com/strong-roots-capital/deep-float-equal/blob/96c2750/src/deep-float-equal.ts#L23)*
+*Defined in [deep-float-equal.ts:23](https://github.com/strong-roots-capital/deep-float-equal/blob/5e7155f/src/deep-float-equal.ts#L23)*
 
 Check two objects for float-equality
 
